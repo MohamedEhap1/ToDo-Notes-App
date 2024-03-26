@@ -11,8 +11,9 @@ class ToDoScreen extends StatefulWidget {
 }
 
 class _ToDoScreenState extends State<ToDoScreen> {
-  @override
   TextEditingController title = TextEditingController();
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: FutureBuilder(
@@ -91,35 +92,37 @@ class _ToDoScreenState extends State<ToDoScreen> {
         child: const Icon(Icons.add),
         onPressed: () {
           showCupertinoDialog(
-              context: context,
-              builder: (_) {
-                return Material(
-                  color: Colors.white.withOpacity(0.3),
-                  child: CupertinoAlertDialog(
-                    title: const Text('Add New ToDO'),
-                    content: TextField(
-                      controller: title,
-                    ),
-                    actions: <CupertinoDialogAction>[
-                      CupertinoDialogAction(
-                        child: const Text('NO'),
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                      ),
-                      CupertinoDialogAction(
-                        child: const Text('Yes'),
-                        onPressed: () {
-                          SqlDb()
-                              .insertToDo(ToDO(title: title.text, selected: 0));
-                          Navigator.pop(context);
-                          setState(() {});
-                        },
-                      ),
-                    ],
+            context: context,
+            builder: (_) {
+              return Material(
+                color: Colors.white.withOpacity(0.3),
+                child: CupertinoAlertDialog(
+                  title: const Text('Add New ToDO'),
+                  content: TextField(
+                    controller: title,
                   ),
-                );
-              });
+                  actions: <CupertinoDialogAction>[
+                    CupertinoDialogAction(
+                      child: const Text('NO'),
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                    ),
+                    CupertinoDialogAction(
+                      child: const Text('Yes'),
+                      onPressed: () {
+                        SqlDb()
+                            .insertToDo(ToDO(title: title.text, selected: 0));
+                        Navigator.pop(context);
+                        title.text = '';
+                        setState(() {});
+                      },
+                    ),
+                  ],
+                ),
+              );
+            },
+          );
         },
       ),
     );

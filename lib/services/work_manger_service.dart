@@ -7,7 +7,7 @@ class WorkManagerService {
       'id 1',
       'show simple Notification',
       frequency: const Duration(
-        hours: 23, //minimum 15 minute and ignore else
+        minutes: 37, //minimum 15 minute and ignore else
       ),
     );
   }
