@@ -15,7 +15,7 @@ The following dependencies and packages have been used in this project:
 - [timezone](https://pub.dev/packages/timezone): A Dart library for working with time zones.
 - [flutter_native_splash](https://pub.dev/packages/flutter_native_splash): A Flutter package to generate native code for adding a splash screen to the Android and iOS apps.
 - [flutter_launcher_icons](https://pub.dev/packages/flutter_launcher_icons): A Flutter package for generating launcher icons.
-
+- [sqflite](https://pub.dev/packages/sqflite): plugin for SQLite, a self-contained, high-reliability, embedded, SQL database engine
 
 ## Screenshots
 
