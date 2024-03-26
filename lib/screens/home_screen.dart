@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:notes_app/database/sql_database.dart';
-import 'package:notes_app/screens/news_screen.dart';
+import 'package:notes_app/component/news_screen.dart';
 import 'package:notes_app/screens/todo_screen.dart';
 
 class HomeScreen extends StatefulWidget {

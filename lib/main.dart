@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:notes_app/database/sql_database.dart';
 import 'package:notes_app/screens/home_screen.dart';
-import 'package:notes_app/screens/local_notification_service.dart';
+import 'package:notes_app/services/local_notification_service.dart';
 import 'package:notes_app/services/work_manger_service.dart';
 
 void main() async {

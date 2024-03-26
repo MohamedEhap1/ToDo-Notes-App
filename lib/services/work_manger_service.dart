@@ -1,4 +1,4 @@
-import 'package:notes_app/screens/local_notification_service.dart';
+import 'package:notes_app/services/local_notification_service.dart';
 import 'package:workmanager/workmanager.dart';
 
 class WorkManagerService {
